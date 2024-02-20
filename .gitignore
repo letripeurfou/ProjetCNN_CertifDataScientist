@@ -1,0 +1,4 @@
+/models/cnn_vgg16.h5
+/data_input/garbage_classification_6classes/
+/data_input/garbage_classification_12classes/
+*.hdf5
