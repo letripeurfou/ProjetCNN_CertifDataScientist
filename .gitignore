@@ -2,3 +2,4 @@
 /data_input/garbage_classification_6classes/
 /data_input/garbage_classification_12classes/
 *.hdf5
+/.idea/
