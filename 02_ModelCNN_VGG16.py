@@ -84,7 +84,8 @@ valid_generator = valid_datagen.flow_from_dataframe(
 #*--------------- MODELE PRE-ENTRAINE - VGG16 ---------------*#
 #*-----------------------------------------------------------*#
 
-#définition du proxy
+# définition du proxy
+# A commenter si non besoin
 proxy_host = 'http://vip-users.proxy.edf.fr'
 proxy_port = '3131'
 os.environ['http_proxy'] = f"{proxy_host}:{proxy_port}"
