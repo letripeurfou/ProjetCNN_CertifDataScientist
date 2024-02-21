@@ -75,7 +75,7 @@ valid_generator = valid_datagen.flow_from_dataframe(
     dataframe=valid_data,
     x_col='path',
     y_col='class_',
-    batch_size=100,
+    batch_size=16,
     target_size=(224, 224),
     class_mode="categorical"
     )
@@ -173,7 +173,7 @@ if not os.path.exists(models_dir):
 vgg16_filepath = os.path.join(models_dir, 'model_vgg_16_' + '-saved-model-{epoch:02d}-acc-{val_accuracy:.2f}.hdf5')
 
 # Rappel pour sauvegarder le meilleur modèle basé sur la précision de validation
-vgg_checkpoint = callbacks.ModelCheckpoint(vgg16_filepath, 
+vgg_checkpoint = callbacks.ModelCheckpoint(vgg16_filepath,
                                            monitor='val_accuracy',
                                            mode='max',
                                            save_best_only=True)
